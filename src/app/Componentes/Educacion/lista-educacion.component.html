@@ -1,0 +1,24 @@
+<div class="card mat-card">
+    <div class="container-fluid">
+
+<div class="row">
+    <h3><p>Estudios</p></h3>
+    
+    <div id="btn-agregar02"><a href="#" class="btn-right" routerLink="/nuevo"><i class="fas fa-plus"></i></a></div>
+    </div>
+<div class="row">
+<div class="col" *ngFor="let educacion of educacions ">
+  <div class="card" id="cardbox03" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{educacion.centro}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{educacion.titulo}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{educacion.tipo_estudio}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{educacion.anio_ingreso}} - {{educacion.anio_egreso}}</h6>
+      <!-- <p class="card-text">{{experiencia.descripcion}}</p> -->
+      <td><button class="btn btn-dark" style="margin:10px;" routerLink="/editar/{{educacion.id}}"><i class="far fa-edit"></i> Editar</button></td>
+      <td><button class="btn btn-dark" (click)="borrar(educacion.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+      
+    </div>
+  </div>
+</div>
+</div>

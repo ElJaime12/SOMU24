@@ -1,0 +1,39 @@
+<div class="card mat-card">
+    <div class="container" *ngIf="proyectos">
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="centro">Nombre del proyecto </label>
+                        <input type="text" class="form-control" id="nombre_proyecto" name="nombre_proyecto"
+                        [(ngModel)]="proyectos.nombre_proyecto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titulo">Fecha de creacion</label>
+                        <input type="text" class="form-control" id="fecha_proyecto" name="fecha_proyecto"
+                        [(ngModel)]="proyectos.fecha_proyecto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titulo">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcion_proyecto" name="descripcion_proyecto"
+                        [(ngModel)]="proyectos.descripcion_proyecto" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="anio_ingreso">Link del proyecto</label>
+                        <input type="text" class="form-control" id="link_proyecto" name="link_proyecto"
+                        [(ngModel)]="proyectos.link_proyecto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="anio_egreso">Imagen del proyecto</label>
+                        <input type="text" class="form-control" id="imagen_proyecto" name="imagen_proyecto"
+                        [(ngModel)]="proyectos.imagen_proyecto" required>
+                    </div>
+                   
+    
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>

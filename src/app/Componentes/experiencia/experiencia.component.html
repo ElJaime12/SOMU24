@@ -1,0 +1,32 @@
+
+
+  <div class="card mat-card">
+    <div class="container-fluid">
+
+<div class="row">
+    <h3><p>Experiencia Laboral</p></h3>
+    
+    <div id="btn-agregar02"><a href="#" class="btn-right" routerLink="/nuevo-experiencia"><i class="fas fa-plus"></i></a></div>
+    </div>
+<div class="row justify-content-between">
+<div class="col" *ngFor="let experiencia of experiencias ">
+  <div class="card" id="cardbox" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{experiencia.puesto}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{experiencia.empresa}} - {{experiencia.pais}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{experiencia.anio_ingreso_exp}} - {{experiencia.anio_egreso_exp}}</h6>
+      <p class="card-text">{{experiencia.descripcion}}</p>
+      <td><button class="btn btn-dark" routerLink="/editar-experiencia/{{experiencia.id_exp}}"><i class="far fa-edit"></i> Editar</button></td>
+      <td><button class="btn btn-dark" (click)="borrar(experiencia.id_exp)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+      
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  
+
+
+   

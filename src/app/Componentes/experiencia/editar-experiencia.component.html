@@ -1,0 +1,43 @@
+<div class="card mat-card">
+<div class="container" *ngIf="experiencias">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="centro">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa"
+                    [(ngModel)]="experiencias.empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Puesto</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto"
+                    [(ngModel)]="experiencias.puesto" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Pais</label>
+                    <input type="text" class="form-control" id="pais" name="pais"
+                    [(ngModel)]="experiencias.pais" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="anio_ingreso">Año Ingreso</label>
+                    <input type="text" class="form-control" id="anio_ingreso_exp" name="anio_ingreso_exp"
+                    [(ngModel)]="experiencias.anio_ingreso_exp" required>
+                </div>
+                <div class="form-group">
+                    <label for="anio_egreso">Año Egreso</label>
+                    <input type="text" class="form-control" id="anio_egreso_exp" name="anio_egreso_exp"
+                    [(ngModel)]="experiencias.anio_egreso_exp" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                    [(ngModel)]="experiencias.descripcion" required>
+                </div>
+
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

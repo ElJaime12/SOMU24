@@ -1,0 +1,60 @@
+<div class="card mat-card" id="01-card">
+  
+    <div id="profile-1"><img id="img01" src="./assets/banner02.jpg">
+      <div id="info" style="padding: 16px">
+        <div id="info-img01">
+          <tr *ngFor="let perfil of perfils "></tr>
+         
+          <!-- <img id="info-user-img" class="profile-image" src="./assets/fotoperfil.jpg"> -->
+           <!-- <div class="btn-edit"> -->
+            <!-- <a href="#" class="btn-right" routerLink="/editar-perfil/{{perfil.id_perf}}">  -->
+            <!-- <i class="fas fa-pencil-alt"></i></a>  -->
+            <!-- </div>  -->
+            <tr *ngFor="let perfil of perfils ">
+          <div class="container-fluid">
+            <div class="row">
+            <div class="col">
+              <a><img id="info-user-img" src="{{perfil?.url_perfil}}" alt="" class="profile-image"></a>
+            
+          </div>  
+          <td><button class="btn btn-dark float-right" routerLink="/editar-perfil/{{perfil.id_perf}}"><i class="far fa-edit"></i> Editar</button></td>
+          </div>
+          
+            <div class="row">
+            <h3 id="nombreinfo">{{perfil.nombre_perfil}} {{perfil.apellido_perfil}}</h3>
+            </div>
+            <div class=" row">
+            <span id="info-posicion">{{perfil.ocupacion_perfil}}</span>
+            </div>
+            <div class="row">
+            <span id="info-empresa"> {{perfil.email_perfil}}</span>
+            </div>
+            <div class="row">
+              <p> <span id="info-empresa">{{perfil.telefono_perfil}}</span></p>
+              </div>
+          </div>
+
+          <div class="container-fluid">
+
+<div class="row">      
+
+            <div class="acercaDe">
+              <h3>Acerca de mi</h3>
+              </div>
+              </div>
+              <div class="row">
+              <tr *ngFor="let perfil of perfils "></tr>
+              
+              <div>
+              <p>{{perfil.acerca_de}}</p>
+              </div>
+         
+          </div>
+        </div>
+
+     </div>
+    </div>
+  </div>
+   
+
+

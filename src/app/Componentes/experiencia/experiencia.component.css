@@ -1,0 +1,21 @@
+#btn-agregar02{
+    margin-left: 30px;
+    margin-top: 5px;
+    }
+
+
+    button{
+        margin: 5px;
+      }
+
+
+    
+  
+#cardbox{
+      border-top: 2px solid green;
+    border-right: 2px solid darkgreen;
+    border-bottom: 2px solid blue;
+    border-left: 2px solid purple;
+    border-radius: 30px;
+    
+}

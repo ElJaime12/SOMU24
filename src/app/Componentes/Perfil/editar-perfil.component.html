@@ -1,0 +1,53 @@
+<div class="card mat-card">
+<div class="container" *ngIf="perfil">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="centro">Nombre</label>
+                    <input type="text" class="form-control" id="nombre_perfil" name="nombre_perfil"
+                    [(ngModel)]="perfil.nombre_perfil" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Apellido</label>
+                    <input type="text" class="form-control" id="apellido_perfil" name="apellido_perfil"
+                    [(ngModel)]="perfil.apellido_perfil" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Email</label>
+                    <input type="text" class="form-control" id="email_perfil" name="email_perfil"
+                    [(ngModel)]="perfil.email_perfil" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="anio_ingreso">Ocupacion</label>
+                    <input type="text" class="form-control" id="ocupacion_perfil" name="ocupacion_perfil"
+                    [(ngModel)]="perfil.ocupacion_perfil" required>
+                </div>
+                <div class="form-group">
+                    <label for="anio_egreso">Telefono</label>
+                    <input type="text" class="form-control" id="telefono_perfil" name="telefono_perfil"
+                    [(ngModel)]="perfil.telefono_perfil" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">URL Perfil</label>
+                    <input type="text" class="form-control" id="url_perfil" name="url_perfil"
+                     [(ngModel)]="perfil.url_perfil" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Url Banner</label>
+                    <input type="text" class="form-control" id="url_banner" name="url_banner"
+                    [(ngModel)]="perfil.url_banner" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Acerca de mi</label>
+                    <input type="text" class="form-control" id="acerca_de" name="acerca_de"
+                    [(ngModel)]="perfil.acerca_de" required>
+                </div>
+
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
